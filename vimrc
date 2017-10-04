@@ -22,6 +22,7 @@ filetype plugin indent on
 let mapleader = ","
 let NERDTreeIgnore = ['node_modules']
 let g:rspec_command = "!bin/rspec {spec}"
+let g:airline_theme='deus'
 
 set tabstop=2
 set shiftwidth=2
