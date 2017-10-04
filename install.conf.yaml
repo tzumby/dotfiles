@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/i3: i3
+    ~/.gitconfig: gitconfig
+    ~/.githelpers: githelpers
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [rm -rf ~/.vim]
+  - [mkdir -p ~/.vim/bundle]
+  - ["git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"]
