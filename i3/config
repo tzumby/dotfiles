@@ -92,7 +92,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1 "
+set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
@@ -128,7 +128,7 @@ bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
 assign [class="Spotify"] $workspace10
-assign [class="Opera"] $workspace1
+assign [class="Firefox"] $workspace1
 assign [class="Slack"] $workspace9
 assign [class="Thunderbird"] $workspace4
 
@@ -210,5 +210,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-exec_always feh --bg-scale /home/tzumby/Pictures/desktop.jpg
+exec_always feh --bg-scale /home/tzumby/Pictures/desktop_new.jpg
 exec_always compton -f
+
+exec --no-startup-id nm-applet
