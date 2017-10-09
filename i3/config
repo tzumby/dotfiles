@@ -165,8 +165,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
+set $bg-color       #23272f
+set $inactive-bg-color #23272f
+#set $bg-color 	         #2f343f
+#set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -186,14 +188,14 @@ hide_edge_borders both
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 				colors {
-					background $bg-color
+					background $bg-color-dark
 				 	separator #757575
 					#                  border             background         text
 					focused_workspace  $bg-color          $bg-color          $text-color
 					inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 					urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 				}
-				position bottom
+				position top
 }
 
 #bindsym XF86MonBrightnessDown exec --no-startup-id bright_down
@@ -214,3 +216,6 @@ exec_always feh --bg-scale /home/tzumby/Pictures/desktop_new.jpg
 exec_always compton -f
 
 exec --no-startup-id nm-applet
+
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
