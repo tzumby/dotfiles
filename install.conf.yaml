@@ -7,10 +7,8 @@
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.config/i3: i3
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
-    ~/.compton.conf: compton.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
