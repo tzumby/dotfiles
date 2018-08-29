@@ -1,3 +1,5 @@
+syntax on
+
 set nocompatible
 filetype off
 
@@ -15,6 +17,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
+Plugin 'rakr/vim-one'
 
 call vundle#end()
 filetype plugin indent on

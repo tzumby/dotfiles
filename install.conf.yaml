@@ -5,10 +5,13 @@
 - clean: ['~']
 
 - link:
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/bin: bin
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
+    ~/.profile: profile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
