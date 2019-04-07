@@ -18,6 +18,15 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
 Plugin 'rakr/vim-one'
+Plugin 'troydm/zoomwintab.vim'
+Plugin 'tomlion/vim-solidity'
+Plugin 'google/vim-jsonnet'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'janko-m/vim-test'
+Plugin 'posva/vim-vue'
+Plugin 'mhinz/vim-mix-format'
+Plugin 'cespare/vim-toml'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -26,6 +35,7 @@ let mapleader = ","
 let NERDTreeIgnore = ['node_modules']
 let g:rspec_command = "!bin/rspec {spec}"
 let g:airline_theme='deus'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|_build|dep)|(\.(swp|ico|git|svn))$'
 
 set tabstop=2
 set shiftwidth=2
@@ -46,4 +56,10 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
