@@ -8,6 +8,7 @@ set -o vi
 
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
+export GPG_TTY=$(tty)
 
 export PATH="/usr/local/bin:$PATH"
 
