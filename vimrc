@@ -41,8 +41,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set relativenumber
+set relativenumber!
+set number!
 set t_Co=256
+set nobackup       " no backup files
+set nowritebackup  " only in case you don't want a backup file while editing
+set noswapfile     " no swap files
 
 nmap <F5> :CtrlPClearCache<CR>
 nmap <F3> :w<CR>:!ruby %<CR>
