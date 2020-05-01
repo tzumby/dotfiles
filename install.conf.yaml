@@ -5,13 +5,12 @@
 - clean: ['~']
 
 - link:
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/bin: bin
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.githelpers: githelpers
-    ~/.profile: profile
+    ~/.zshrc: zshrc
     ~/.tmuxline_snapshot: tmuxline_snapshot
 
 - shell:

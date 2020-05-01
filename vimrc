@@ -26,7 +26,10 @@ Plugin 'janko-m/vim-test'
 Plugin 'posva/vim-vue'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'cespare/vim-toml'
-
+Plugin 'brooth/far.vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim/killersheep'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,6 +39,7 @@ let NERDTreeIgnore = ['node_modules']
 let g:rspec_command = "!bin/rspec {spec}"
 let g:airline_theme='deus'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|_build|dep)|(\.(swp|ico|git|svn))$'
+let g:mix_format_on_save = 1
 
 set tabstop=2
 set shiftwidth=2
@@ -48,12 +52,18 @@ set nobackup       " no backup files
 set nowritebackup  " only in case you don't want a backup file while editing
 set noswapfile     " no swap files
 
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
 nmap <F5> :CtrlPClearCache<CR>
 nmap <F3> :w<CR>:!ruby %<CR>
 nmap <F4> :w<CR>:!python %<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 nnoremap <F1> :setlocal number!<cr>
 nnoremap <F2> :setlocal relativenumber!<cr>
+
+map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -67,3 +77,4 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null

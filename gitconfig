@@ -1,14 +1,30 @@
 [user]
-    name = Razvan
+    name = Razvan Draghici
     email = tzumby@gmail.com
-	signingkey = 6FA624CC945E01D5
+  signingkey = 6FA624CC945E01D5
+[color]
+  ui = auto
 [diff]
 	word-diff = color
 [alias]
 	wdiff = diff --color-words
 	showtool = "!f() { git difftool $1^ $1; }; f"
 	added = difftool --cached
-	clown = clone
+  clown = clone
+  ci = commit --verbose
+  st = status
+  co = checkout
+  di = diff
+  dc = diff --cached
+  noff = merge --no-ff
+  aa = add --all
+  fa = fetch --all
+  ll = log --graph --decorate --pretty=oneline --abbrev-commit
+  pullff = pull --ff-only # pull and merge only if it would not create a merge bubble (no a fast forward)
+
+  r = !GIT_NO_PAGER=1 git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers && pretty_git_log"
 [diff]
 	tool = icdiff
 [difftool]
@@ -18,7 +34,10 @@
 [pager]
 	difftool = true
 [rebase]
-autoStash = true
-
+  autoStash = true
 [commit]
-	gpgsign = true
+  gpgsign = false
+[pull]
+  rebase = true
+[core]
+	excludesfile = /Users/tzumby/.gitignore_global
