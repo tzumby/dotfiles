@@ -30,6 +30,15 @@ Plugin 'brooth/far.vim'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim/killersheep'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'pechorin/any-jump.vim'
+Plugin 'sbdchd/neoformat'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'nvim-lua/popup.nvim'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'tweekmonster/gofmt.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -77,4 +86,11 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+" Format JSON
+nmap =j :%!python -m json.tool<CR>
+
+autocmd BufWritePre *.js Neoformat
+
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+autocmd BufWritePre *.md :%s/\s\+$//e

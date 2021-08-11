@@ -1,7 +1,7 @@
 [user]
     name = Razvan Draghici
     email = tzumby@gmail.com
-  signingkey = 6FA624CC945E01D5
+	signingkey = 48C4028705B9B289
 [color]
   ui = auto
 [diff]
@@ -36,8 +36,10 @@
 [rebase]
   autoStash = true
 [commit]
-  gpgsign = false
+	gpgsign = true
 [pull]
   rebase = true
 [core]
-	excludesfile = /Users/tzumby/.gitignore_global
+	excludesfile = ~/.gitignore
+#[gpg]
+#	program = /usr/local/bin/gpg
