@@ -36,7 +36,6 @@ Plugin 'sbdchd/neoformat'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'nvim-lua/popup.nvim'
 Plugin 'nvim-lua/plenary.nvim'
-Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tweekmonster/gofmt.vim'
 

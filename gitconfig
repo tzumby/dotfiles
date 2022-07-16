@@ -1,6 +1,6 @@
 [user]
-    name = Razvan Draghici
-    email = tzumby@gmail.com
+  name = Razvan Draghici
+  email = tzumby@gmail.com
 	signingkey = 48C4028705B9B289
 [color]
   ui = auto
@@ -43,3 +43,5 @@
 	excludesfile = ~/.gitignore
 #[gpg]
 #	program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main
